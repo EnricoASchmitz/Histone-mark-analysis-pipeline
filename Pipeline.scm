@@ -22,36 +22,36 @@
  ;; To start you need 1 Directory containing at least 1 treatment file and 1 control file both in fastq(can be gzipped), bam, bed/tagAlign or sra
  ;; The name needs to be the same except 1 part that is used for all control files e.g. treatment file Human_Lung.fastq.gz and the control file Human_Lung_control.fastq.gz
 ;; REF needs to be the path to a indexed reference genome file 
-(define REF "/hpc/dhl_ec/eschmitz/genome/hg19.fa")
+(define REF "")
 ;; Genome is the path to a genome file, only needed if input files are .sra
-(define Genome "/hpc/dhl_ec/eschmitz/BASH/Pipeline/packages/bedtools2/genomes/human.hg19.genome")
+(define Genome "")
 ;; ControlString is the part of a the controle file names that is unique for control files.
-(define ControlString "_control")
+(define ControlString "")
 ;; The Directory containing all the fastq files that need to be converted
-(define Directory "/hpc/dhl_ec/eschmitz/Com_FASTQ/")
+(define Directory "")
 ;; Output_Directory where all output can be stored, should differ from Directory
-(define Output_Directory "/hpc/dhl_ec/eschmitz/FinalPipelineRun/")
+(define Output_Directory "")
 ;; Directory with beagle files
-(define dir1000G "/hpc/dhl_ec/dhemerich/ENRICO/beagle_files/")
+(define dir1000G "")
 ;; (tab delimited) file listing individuals present in the Beagle files along with population information (popName) in the third column
-(define BeaglePopList "/hpc/dhl_ec/dhemerich/ENRICO/popList.txt")
+(define BeaglePopList "")
 ;; popName is the origin of the population
-(define popName "EUR")
+(define popName "")
 ;;  (tab delimited) SNP name, chromosome (chrN format), base pair position. These are the SNPs with location (location needs to be the same as in BeaglePopList)
-(define SNPmappings "/hpc/dhl_ec/eschmitz/BP.txt")
+(define SNPmappings "")
 ;;  computes LD between the index SNP and SNPs within this window for LD 
-(define LDwindow "500000")
+(define LDwindow "")
 ;; cut­off for Ld calculation
-(define r2 "0.8")
+(define r2 "")
 ;; Name of the histonemark
-(define histoneName "H3K27ac")
+(define histoneName "")
 ;; How many times does a permutation needs to be done.
-(define permutations "10000")
+(define permutations "")
 
 
 ;; This directory can be downloaded from http://archive.broadinstitute.org/mpg/epigwas/
 ;; IMPORTANT: tissue indexing must be the same for background and phenotype SNPs.    
-(define bgDir "/home/dhl_ec/eschmitz/workflows/backgroundSNPs/")
+(define bgDir "")
 ;;Nothing else needs to be personalised
 ;;Make sure enough time and memory is provided for the jobs  (run-time ( complexity (space (gigabytes ?))(time (minutes ?))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
